@@ -1,5 +1,5 @@
-function encriptar(){
-    var texto = document.getElementById("input-text").ariaValueMax;
+function encriptar() {
+    var texto = document.getElementById("input-text").value;
     texto = texto
         .replace(/e/gi, "enter")
         .replace(/i/gi, "imes")
@@ -10,10 +10,10 @@ function encriptar(){
 }
 
 var boton = document.getElementById("boton-encriptar");
-boton.onclick = function(){
-    if(document.getElementById("input-text").value.match(/^[a-z ]*$/)){
+boton.onclick = function () {    
+    if(document.getElementById("input-text").value.match(/^[a-z ]*$/)) {
         encriptar();
-    }else {
+    } else {
         alert("Solo se permiten letras minusculas, sin caracteres especiales.")
     }
-}
+};
